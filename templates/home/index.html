@@ -17,7 +17,7 @@
 
                 {% endif %}
                 {% if request.user.is_authenticated %}
-                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#contact">Project Demo</a></li>
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{% url 'upload' %}">Project Demo</a></li>
                 {% else %}
                 <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#contact">contact</a></li>
                 {% endif %}
