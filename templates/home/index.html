@@ -13,10 +13,14 @@
                 <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">LOGOUT</a></li>
                 {% else %}
                 <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">LOGIN</a></li>
-                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#">SIGNUP</a></li>
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="{% url 'signup' %}">SIGNUP</a></li>
 
                 {% endif %}
+                {% if request.user.is_authenticated %}
+                <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#contact">Project Demo</a></li>
+                {% else %}
                 <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a class="nav-link js-scroll-trigger" href="#contact">contact</a></li>
+                {% endif %}
             </ul>
     </div>
     </div>
@@ -71,7 +75,7 @@
 <!-- End: Map Clean -->
 <footer>
     <div class="container text-center">
-        <p>Copyright ©&nbsp;Brand 2018</p>
+        <p>Copyright ©&nbsp;TeamArtemis 2020</p>
     </div>
 </footer>
 
